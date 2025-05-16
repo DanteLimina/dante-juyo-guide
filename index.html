@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento senza titolo</title>
+</head>
+
+<body><!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
@@ -22,13 +29,80 @@
   <p>Questa guida è pensata per accompagnare gli utenti e guidare i catalogatori nell'esplorazione dell'archivio digitale di Dante Juyo, dedicato alla ricezione della <i>Commedia</i> in Giappone.</p>
 
   <h2 id="modelli">🗂️ Modelli di risorsa</h2>
-  <ul>
-    <li><strong>Libri Danteschi</strong>: schede di libri, saggi e traduzioni.</li>
-    <li><strong>Dante nell’arte</strong>: cinema, teatro, TV, arti figurative, musica.</li>
-    <li><strong>Dante e la società</strong>: eventi pubblici, conferenze, pubblicità, diplomazia.</li>
-  </ul>
+	
+	  <nav>
+    <a href="#INPUT">INPUT</a>
+    <a href="#OUTPUT">OUTPUT</a>
+    <a href="#introduzione">Ritorna all'inizio</a>
+  </nav>
+	
+	<h3 id="INPUT" >INPUT</h3>
+<h4 id="libridanteschi"> Libri Danteschi</h4>
+	
+    <ul><strong>Collezione</strong></ul>
+<p> <em> Resource template</em>: input_collezione</p>
+<p>Classe: Ontologia Bibliografica:Collezione</p>
+<p><strong>Proprietà chiave</strong>:&nbsp;</p>
+	<ul>
+		<li>dcterms:title (Titolo; Mandatory; Resource Title)</li>
+		<li>dcterms:creator (Biblioteca o collezionista; Resource Description)</li>
+		<li>dcterms:description (Descrizione)</li>
+        <li>dcterms:coverage (Luogo fisico di conservazione)</li>
+        <li>dcterms:identifier (Codice, se interno)</li>
+        <li>foaf:homepage (URL della collezione)</li>
+	</ul>
+  
+	<ul><strong>Libro dantesco</strong></ul>
+<p> <em> Resource template</em>: input_libro_dantesco</p>
+<p>Classe: Ontologia Bibliografica:Libro</p>
+<p><strong>Proprietà chiave</strong>:&nbsp;</p>
+	<ul>
+		<li>dcterms:title (Titolo; Mandatory; Resource Title)</li>
+		<li>dcterms:alternative (Titolo alternativo/originale; Lan: jap)</li>
+		<li>dcterms:creator (Autore; Resource Description)</li>
+		<li>dcterms:publisher (Editore; Resource Description)</li>
+        <li>bibo:edition (Edizione, se utile)</li>
+		<li>dcterms:date (Data pubblicazione)</li>
+		<li>dcterms:language (Lingua)</li>
+		<li>dcterms:identifier (ISBN, altri codici)</li>
+		<li>dcterms:subject (Temi o parole chiave)</li>
+        <li>dcterms:description (Descrizione)</li>
+		<li>skos:hasRelated (Collegamento a mostre, eventi)</li>
+	</ul>
+  
 
+    <h4 id="dantearte">Dante nell'Arte</h4>
+<ul><strong>Opera audiovisiva</strong></ul>
+
+<ul><strong>Opera audiovisiva</strong></ul>
+<p> <em> Resource template</em>: input_opera_audiovisiva</p>
+<p>Classe: Ontologia Bibliografica:documento audiovisivo</p>
+<p><strong>Proprietà chiave</strong></p>
+	<ul>
+        <li>dcterms:title (Titolo; Mandatory; Resource Title)</li>
+        <li>dcterms:creator (Regista, autore)</li>
+        <li>dcterms:date (Anno)</li>
+        <li>dcterms:description (Sinossi, note critiche)</li>
+        <li>dcterms:language (Lingua)</li>
+        <li>dcterms:type (Tipologia: Film, Opera Teatrale, Produzione televisiva)</li>
+        
+    </ul>
+
+
+    <ul><strong>Arti figurative / Architettura / Musica</strong></ul>
+<p> <em> Resource template</em>: input_opera_artistica</p>
+<p>Classe: Ontologia Bibliografica:opera artistica</p>
+<p><strong>Proprietà chiave</strong></p>
+	<ul>
+        <li>dcterms:title (Titolo; Mandatory; Resource Title)</li>
+        <li>dcterms:creator (Artista, compositore)</li>
+        <li>dcterms:date (Anno)</li>
+        <li>dcterms:description (Descrizione)</li>
+        <li>dcterms:subject (Personaggi danteschi raffigurati)</li>
+        <li>dcterms:format (Olio su tela, installazione sonora...)</li>
+        <li>foaf:depiction (Immagine o media allegato)</li>
+    </ul>
   <h2 id="contatti">📬 Contatti</h2>
-  <p>Per collaborazioni o suggerimenti: <a href="mailto:info@dantelimina.it">info@dantelimina.it</a></p>
+  <p>Per collaborazioni o suggerimenti: <a href="mailto:prin.limina@gmail.com">info@dantelimina.it</a></p>
 </body>
 </html>
