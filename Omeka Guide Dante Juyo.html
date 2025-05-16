@@ -30,7 +30,7 @@
   </nav>
 	
 	<h3 id="INPUT" >INPUT</h3>
-<h4 id="libridanteschi"> Libri Danteschi</h4>
+<h4 id="libri-danteschi"> Libri Danteschi</h4>
 	
     <ul><strong>Collezione</strong></ul>
 <p> <em> Resource template</em>: input_collezione</p>
@@ -45,7 +45,7 @@
         <li>foaf:homepage (URL della collezione)</li>
 	</ul>
   
-	<ul><strong>Libro dantesco</strong></ul>
+	    <ul><strong>Libro dantesco</strong></ul> <ul>
 <p> <em> Resource template</em>: input_libro_dantesco</p>
 <p>Classe: Ontologia Bibliografica:Libro</p>
 <p><strong>Proprietà chiave</strong>:&nbsp;</p>
@@ -62,11 +62,10 @@
         <li>dcterms:description (Descrizione)</li>
 		<li>skos:hasRelated (Collegamento a mostre, eventi)</li>
 	</ul>
+</ul>
   
 
-    <h4 id="dantearte">Dante nell'Arte</h4>
-<ul><strong>Opera audiovisiva</strong></ul>
-
+    <h4 id="dante-arte">Dante nell'Arte</h4>
 <ul><strong>Opera audiovisiva</strong></ul>
 <p> <em> Resource template</em>: input_opera_audiovisiva</p>
 <p>Classe: Ontologia Bibliografica:documento audiovisivo</p>
@@ -91,93 +90,54 @@
         <li>dcterms:creator (Artista, compositore)</li>
         <li>dcterms:date (Anno)</li>
         <li>dcterms:description (Descrizione)</li>
-        <li>dcterms:subject (Personaggi danteschi raffigurati)</li>
+        <li>dcterms:subject (Soggetto rappresentato)</li>
         <li>dcterms:format (Olio su tela, installazione sonora...)</li>
         <li>foaf:depiction (Immagine o media allegato)</li>
     </ul>
   
 
+    <h4 id="dante-società"> Dante e la società</h4>
   
-  b. Arti figurative / Architettura / Musica
-  Resource template: Opera artistica
-  Classe: schema:VisualArtwork, schema:MusicComposition, ecc.
-  Proprietà chiave:
+  <ul><strong>Mostre / Eventi pubblici / Conferenze</strong></ul>
+<p> <em> Resource template</em>: input_evento</p>
+<p>Classe: </p>
+<p><strong>Proprietà chiave</strong></p>
+	<ul>
+        <li>dcterms:title (Titolo; Mandatory; Resource Title)</li>
+        <li>dcterms:description (Descrizione)</li>
+        <li>dcterms:date (Data)</li>
+        <li>dcterms:location (Luogo)</li>
+        <li>dcterms:creator (Organizzatore)</li>
+        <li>dcterms:contributor (Relatori, artisti invitati)</li>
+        </li>dcterms:relation (Collegamenti a opere o materiali) -> Aggiungere altro item: Faldone + Fascicolo (se archivio) </li> 
+    </ul>
   
-  dcterms:title
-  
-  dcterms:creator (Artista, compositore)
-  
-  dcterms:date
-  
-  dcterms:description
-  
-  dcterms:subject (Personaggi danteschi raffigurati)
-  
-  dcterms:format (Olio su tela, installazione sonora...)
-  
-  foaf:depiction (Immagine o media allegato)
-  
-  🏙️ 4. Dante e la società
-  a. Mostre / Eventi pubblici / Conferenze
-  Resource template: Evento
-  Classe: schema:Event
-  Proprietà:
-  
-  dcterms:title
-  
-  dcterms:description
-  
-  dcterms:date
-  
-  dcterms:location (Luogo)
-  
-  dcterms:creator (Organizzatore)
-  
-  dcterms:contributor (Relatori, artisti invitati)
-  
-  dcterms:relation (Collegamenti a opere o materiali)
-  
-  b. Pubblicità
-  Resource template: Oggetto pubblicitario
-  Classe: schema:CreativeWork
-  Proprietà chiave:
-  
-  dcterms:title (Nome campagna)
-  
-  dcterms:creator (Agenzia)
-  
-  dcterms:date
-  
-  dcterms:description
-  
-  dcterms:subject (Riferimenti danteschi)
-  
-  foaf:depiction (Immagine)
-  
-  c. Relazioni Italia-Giappone / Diplomazia
-  Resource template: Documento diplomatico
-  Classe: schema:Article oppure dcterms:Text
-  Proprietà:
-  
-  dcterms:title
-  
-  dcterms:creator (Ministeri, enti)
-  
-  dcterms:date
-  
-  dcterms:description
-  
-  dcterms:coverage (Contesto: anniversari, scambi culturali)
-  
-  dcterms:relation (Collegamento a eventi, mostre) </p>
-<ul>
-  <li><strong>Dante nell’arte</strong>: cinema, teatro, TV, arti figurative, musica.</li>
-</ul>
-<li><strong>Dante e la società</strong>: eventi pubblici, conferenze, pubblicità, diplomazia.</li>
-	
-	<h4 id="dante-arte"> Dante nell'Arte</h4>
-	
-	<h4 id="dante-società"> Dante e la società</h4>
+
+    <ul><strong>Pubblicità</strong></ul>
+<p> <em> Resource template</em>: input_oggetto_pubblicitario</p>
+<p>Classe: </p>
+<p><strong>Proprietà chiave</strong></p>
+	<ul>
+        <li>dcterms:title (Nome campagna)</li>
+        <li>dcterms:creator (Organizzatore)</li>
+        <li>dcterms:contributor (Relatori, artisti invitati)</li>
+        </li>dcterms:relation (Collegamenti a opere o materiali)</li>
+        <li>foaf:depiction (Immagine)</li>
+
+        <ul><strong>Relazioni Italia-Giappone / Diplomazia</strong></ul>
+<p>     ì <em> Resource template</em>: input_documento_diplomatico</p>
+<p>Classe: </p>
+<p><strong>Proprietà chiave</strong></p>
+	<ul>
+        <li>dcterms:title (Titolo; Mandatory; Resource Title)</li>
+        <li>dcterms:creator (Ministeri, enti)</li>
+        <li>dcterms:date (Data)</li>
+        <li>dcterms:description (Descrizione)</li>
+        <li>dcterms:subject (Riferimenti danteschi)</li>
+        <li>dcterms:relation (Collegamenti a opere o materiali) -> Aggiungere altro item: Faldone + Fascicolo (se archivio) </li>
+        <li>foaf:depiction (Immagine)</li>
+
+
 	
 	<h3 id="OUTPUT" >OUTPUT</h3>
 
