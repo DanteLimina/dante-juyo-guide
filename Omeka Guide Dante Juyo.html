@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Dante Juyo – Guida</title>
   <style>
-    body { font-family: sans-serif; max-width: 800px; margin: 2em auto; padding: 1em; }
+    body { font-family: sans-serif; max-width: 900px; margin: 2em auto; padding: 1em; }
     h1, h2 { color: darkred; }
     nav a { margin-right: 1em; }
   </style>
@@ -15,6 +15,8 @@
   <nav>
     <a href="#introduzione">Introduzione</a>
     <a href="#modelli">Modelli di risorsa</a>
+    <a href="#archivio">Struttura archivistica</a>  
+    <a href="#bibliografia">Bibliografia</a>
     <a href="#contatti">Contatti</a>
   </nav>
 
@@ -125,6 +127,22 @@
 		<li>foaf:depiction (Immagine)</li> </ul>
 
 <ul><strong>Relazioni Italia-Giappone / Diplomazia</strong></ul>
+<p> <em> Resource template</em>: input_unità_archivistica </p>
+<p>Classe: </p>
+<p><strong>Proprietà chiave</strong></p>
+	<ul>
+        <li>dcterms:identifier (Segnatura archivistica; Codice univoco)</li>
+        <li>dcterms:title (Intitolazione dell’unità archivistica; Titolo assegnato)</li>
+        <li>dcterms:type (Tipologia; Vocabolario / testo; Fascicolo, Registro, ecc.)</li>
+        <li>dcterms:format (Supporto; Testo / vocabolario; Cartaceo, digitale, ecc.)</li>
+        <li>dcterms:extent (Consistenza; Testo; Es. “12 carte sciolte”)</li>
+        <li>dcterms:date (Estremo cronologico; Data / testo; Es. “1921-05-01” / “XX sec.”)</li>
+        <li>dcterms:description (Descrizione del contenuto; Testo lungo; Campo libero)</li>
+        <li>dcterms:tableOfContents (Trascrizione; Testo lungo; Facoltativo)</li>
+        <li>dcterms:physicalMedium (Stato di conservazione; Testo breve; Es. “Fragile, macchie di umidità”)</li>
+    </ul>
+        
+
 <p><em> Resource template</em>: input_documento_diplomatico</p>
 		<p>Classe: </p>
 		<p><strong>Proprietà chiave</strong></p>
@@ -133,16 +151,111 @@
         <li>dcterms:creator (Cretori : Ministeri, enti)</li>
         <li>dcterms:date (Data)</li>
         <li>dcterms:description (Descrizione)</li>
-        <li>dcterms:relation (Collegamenti a opere o materiali) -&gt; Aggiungere altro item: Faldone + Fascicolo se materiale d'archivio </li>
+        <li>dcterms:relation (Collegamenti a opere o materiali); Aggiungere altro item: Faldone + Fascicolo se materiale d'archivio </li>
         <li>foaf:depiction (Immagine)</li>
 		</ul>
 
 	
 <h3 id="OUTPUT" >OUTPUT</h3>
+<ul><strong>Traduzioni e adattamenti</strong></ul>
+<p><em> Resource template</em>: output_traduzione</p>
+		<p>Classe: Libro </p>
+		<p><strong>Proprietà chiave</strong></p>
+	<ul>
+        <li>dcterms:title (Titolo originale; Mandatory; Resource Title)</li>
+        <li>dcterms:creator (Tradotto con note)</li>
+        <li>dcterms:date (Anno)</li>
+        <li>dcterms:language (Lingua)</li>
+        <li>dcterms:relation (Collegamenti a opere o materiali)</li>
+        <li>dctermd:spatial (Luogo di edizione)</li>
+        <li>dcterms:publisher (Editore)</li>
+        <li>dcterms:identifier (Identificativo ISBN - OPAC SBN)</li>
+        <li>dcterms:description (Descrizione)</li>
+    </ul>
 
-	
-	
-	
+<!-- MUSICA E SPETTACOLO -->
+<ul><strong>Musica e Spettacolo</strong></ul>
+<p><em>Resource template</em>: <code>output_musica_spettacolo</code></p>
+<p>Classe: </p>
+<p><strong>Proprietà chiave</strong></p>
+<ul>
+    <li>dcterms:title (Titolo Mandatory; Resource Title)</li>
+    <li>dcterms:creator (Autore / Compositore / Esecutore)</li>
+    <li>dcterms:date (Data della composizione, prima esecuzione o pubblicazione)</li>
+    <li>dcterms:description (Descrizione dell'opera o dello spettacolo)</li>
+    <li>dcterms:format (Supporto; spartito, audio, video, CD, streaming, ecc.)</li>
+    <li>dcterms:tableOfContents (Temi o parole chiave; es. Inferno, Francesca da Rimini)</li>
+</ul>
+
+<!-- ARTI FIGURATIVE -->
+<ul><strong>Arti figurative</strong></ul>
+<p><em>Resource template</em>: <code>output_arte_figurativa</code></p>
+<p>Classe: </p>
+<p><strong>Proprietà chiave</strong></p>
+<ul>
+    <li>dcterms:title (Titolo Mandatory; Resource Title)</li>
+    <li>dcterms:creator (Artista / Autore)</li>
+    <li>dcterms:date (Data di creazione o esposizione)</li>
+    <li>dcterms:description (Descrizione iconografica o critica)</li>
+    <li>dcterms:format (Tecnica/supporto; olio su tela, stampa, scultura, ecc.)</li>
+    <li>dcterms:tableOfContents (Temi danteschi rappresentati; canti, personaggi, luoghi)</li>
+</ul>
+
+<!-- CULTURA POP -->
+<ul><strong>Cultura pop</strong></ul>
+
+<!-- Manga -->
+<p><em>Resource template</em>: <code>output_Manga</code></p>
+<p>Classe: <code>schema:ComicSeries</code> o <code>schema:CreativeWork</code></p>
+<p><strong>Proprietà chiave</strong></p>
+<ul>
+    <li>dcterms:title (Titolo del manga)</li>
+    <li>dcterms:creator (Mangaka / Studio)</li>
+    <li>dcterms:date (Anno di pubblicazione)</li>
+    <li>dcterms:description (Sinossi e riferimenti danteschi)</li>
+    <li>dcterms:language (Lingua di pubblicazione)</li>
+</ul>
+
+<!-- Anime -->
+<p><em>Resource template</em>: <code>output_Anime</code></p>
+<p>Classe: Ontologia Bibliografica:Serie</p>
+<p><strong>Proprietà chiave</strong></p>
+<ul>
+    <li>dcterms:title (Titolo della serie)</li>
+    <li>dcterms:alternative (Titolo alternativo)</li>
+    <li>dcterms:creator (Studio di produzione / Regista)</li>
+    <li>dcterms:date (Data di trasmissione)</li>
+    <li>dcterms:language (Lingua originale)</li>
+    <li>dcterms:description (Trama e connessioni con l'opera di Dante)</li>
+</ul>
+
+<!-- Videogames -->
+<p><em>Resource template</em>: <code>output_Videogames</code></p>
+<p>Classe: </p>
+<p><strong>Proprietà chiave</strong></p>
+<ul>
+    <li>dcterms:title (Titolo del gioco; Mandatory; Resource Title)</li>
+    <li>dcterms:creator (Studio / Publisher)</li>
+    <li>dcterms:date (Anno di uscita)</li>
+    <li>dcterms:description (Contenuto e riferimenti a Dante)</li>
+    <li>dcterms:format (Piattaforma; PC, console, mobile...)</li>
+</ul>
+
+<!-- Mediamix -->
+<p><em>Resource template</em>: <code>output_Mediamix</code></p>
+<p>Classe: dcterms:Resource</p>
+<p><strong>Proprietà chiave</strong></p>
+<ul>
+    <li>dcterms:title (Titolo del progetto; Mandatory; Resource Title)</li>
+    <li>dcterms:alternative (Titolo alternativo)</li>
+    <li>dcterms:creator (Team / Agenzia)</li>
+    <li>dcterms:date (Data di pubblicazione o inizio progetto)</li>
+    <li>dcterms:description (Panoramica, sinossi e riferimenti danteschi)</li>
+    <li>dcterms:version (Ha una versione)</li>
+</ul>
+        
+
+        
 <h2 id="archivio">📂 Struttura archivistica</h2>
 <p> Creare tutte le strutture necessarie e collegarle tra loro:</p>
 	<p>Es.&nbsp;&nbsp;</p>
@@ -178,9 +291,14 @@
 			<li>Media: PDF o immagine </li> 
 			<li>Codice: DJ-F01-FASC01-DOC01 </li></ul>
 	
+<h2 id="bibliografia">📚 Bibliografia</h2>
+<p>Dante Juyo, Copyright 2025 <a href="https://www.dantejuyo.it">www.dantejuyo.it</a></p>
+<p><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/">DCMI Metadata Terms</a></p>
+<p><a href="https://www.iccu.sbn.it/it/normative-standard/linee-guida-per-la-digitalizzazione-e-metadati/dublin-core-metadata-element-set-versione-1.1-traduzione-italiana/index.html">Dublin Core Metadata Element Set versione 1.1 - Traduzione italiana ICCU - Istituto Centrale per il Catalogo Unico</a></p>
+<p><a href="https://omeka.org/s/">Omeka S</a></p>
+
 
 <h2 id="contatti">📬 Contatti</h2>
   <p>Per collaborazioni o suggerimenti: <a href="mailto:prin.limina@gmail.com">prin.limina@gmail.com</a></p>
 </body>
 </html>
-
